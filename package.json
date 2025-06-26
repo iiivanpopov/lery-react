@@ -38,8 +38,8 @@
 		"@types/react": "^19.1.8"
 	},
 	"scripts": {
-		"build:esm": "bun build ./src/index.ts --outdir ./dist/esm --minify --target bun --format esm --sourcemap=none",
-		"build:cjs": "bun build ./src/index.ts --outdir ./dist/cjs --minify --target bun --format cjs --sourcemap=none",
+		"build:esm": "bun build ./src/index.ts --outdir ./dist/esm --minify --target bun --format esm --sourcemap=none --external react",
+		"build:cjs": "bun build ./src/index.ts --outdir ./dist/cjs --minify --target bun --format cjs --sourcemap=none --external react",
 		"build:types": "tsc -p tsconfig.types.json",
 		"build": "bun run build:esm && bun run build:cjs && bun run build:types"
 	},
